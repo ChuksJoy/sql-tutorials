@@ -1,0 +1,26 @@
+
+
+**Query #1**
+
+    SET search_path = dannys_diner;
+
+There are no results to be displayed.
+
+---
+**Query #2**
+
+    SELECT
+      	customer_id, Sum(price)
+     From Sales
+     join menu
+     USING(product_id)
+     group by customer_id;
+
+| customers danny has | Total price |
+| -----------         | ---         |
+| B                   | 74          |
+| C                   | 36          |
+| A                   | 76          |
+
+---
+
